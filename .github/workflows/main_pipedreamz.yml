@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'pipedreamz'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B7EC512B50AF496A975C9D19247FD0D9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_59E8A63EF1FC48538F345051ECD5EC8F }}
           package: .
