@@ -1,7 +1,6 @@
 if(process.env.NODE_ENV !== 'production'){
 	require('dotenv').config()
 }
-
 var fs = require('fs');
 const express = require('express')
 app = express()
@@ -25,7 +24,7 @@ var registerschema = new mongoose.Schema({
   name: String,
   age : Number
 });
-var user = mongoose.model('registered', registerschema);
+var user = mongoose.model('registered_users', registerschema);
 app.get('/register/', (req,res) =>{
   fs.readFile(__dirname + '/static/register.html/', function(err, data){
     res.writeHead(200, {'Content-Type': 'text/html'});
@@ -35,9 +34,6 @@ app.get('/register/', (req,res) =>{
 })
 
 app.post('/register/done', function(req,res){
-
-
-  -
   new user({
     _id : req.body.email,
     name : req.body.name,
