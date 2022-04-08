@@ -72,8 +72,8 @@ function isLoggedOut(req, res, next) {
 app.get('/', isLoggedOut, (req, res) => {
 	res.render("home", { title: "Home" });
 });
-User.findOne({username: 'a'},(err,data)=> console.log(data));
-User.findOneAndUpdate({username : 'a'},(err,data)=> {$inc : {gamesplayed : 1}});
+//User.findOne({username: 'a'},(err,data)=> console.log(data));
+//User.findOneAndUpdate({username : 'a'},(err,data)=> {$inc : {gamesplayed : 1}});
 /*app.get('/about', (req, res) => {
 	res.render("index", { title: "About" });
 });
